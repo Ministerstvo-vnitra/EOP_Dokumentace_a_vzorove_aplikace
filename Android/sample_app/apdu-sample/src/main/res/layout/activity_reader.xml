@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/txtReaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="32sp"
+        android:text="APDU Test" />
+
+    <TextView
+        android:id="@+id/txtReaderManufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/radioGroupReader"
+        android:layout_marginBottom="10dp"
+        android:text="Select manufacturer:" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupReader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnReaderContinue"
+        android:layout_marginBottom="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioBtnReaderAcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACS" />
+
+        <RadioButton
+            android:id="@+id/radioBtnReaderFeitian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feitian" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnReaderContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Continue" />
+</RelativeLayout>

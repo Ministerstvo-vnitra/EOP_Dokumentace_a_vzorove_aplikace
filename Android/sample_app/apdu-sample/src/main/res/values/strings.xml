@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">APDU SDK Demo</string>
+
+    <string name="main.selector.init">Initialize</string>
+    <string name="main.selector.reset">Reset</string>
+    <string name="main.selector.containers">Container list</string>
+    <string name="main.selector.cardId">Card ID</string>
+    <string name="main.selector.pinVerify">PIN Verify</string>
+    <string name="main.selector.pinInfo">PIN Info</string>
+    <string name="main.selector.sessionPin">Session PIN</string>
+    <string name="main.selector.unverify">Unverify</string>
+    <string name="main.selector.isVerified">Verification check</string>
+    <string name="main.selector.certificate">Get Certificate</string>
+    <string name="main.selector.publicKey">Get Public Key</string>
+    <string name="main.selector.signData">SignData</string>
+    <string name="main.scanning.cancel">Stop</string>
+
+    <string-array name="initializeList">
+        <item>@string/main.selector.init</item>
+    </string-array>
+
+    <string-array name="noContainersList">
+        <item>@string/main.selector.cardId</item>
+        <item>@string/main.selector.containers</item>
+        <item>@string/main.selector.pinVerify</item>
+        <item>@string/main.selector.pinInfo</item>
+        <item>@string/main.selector.sessionPin</item>
+        <item>@string/main.selector.unverify</item>
+        <item>@string/main.selector.isVerified</item>
+        <item>@string/main.selector.reset</item>
+    </string-array>
+
+    <string-array name="fullList">
+        <item>@string/main.selector.cardId</item>
+        <item>@string/main.selector.containers</item>
+        <item>@string/main.selector.pinVerify</item>
+        <item>@string/main.selector.pinInfo</item>
+        <item>@string/main.selector.sessionPin</item>
+        <item>@string/main.selector.unverify</item>
+        <item>@string/main.selector.isVerified</item>
+        <item>@string/main.selector.publicKey</item>
+        <item>@string/main.selector.certificate</item>
+        <item>@string/main.selector.signData</item>
+        <item>@string/main.selector.reset</item>
+    </string-array>
+</resources>

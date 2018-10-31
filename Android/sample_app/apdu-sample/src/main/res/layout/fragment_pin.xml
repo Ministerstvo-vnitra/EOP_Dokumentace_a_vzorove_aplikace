@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtPinTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Choose a PIN reference:"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPinTitle">
+
+        <RadioButton
+            android:id="@+id/radioBtnPinPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PIN" />
+
+        <RadioButton
+            android:id="@+id/radioBtnPinPuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUK" />
+
+        <RadioButton
+            android:id="@+id/radioBtnPinQpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QPIN" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPinContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupPin" />
+
+</android.support.constraint.ConstraintLayout>
