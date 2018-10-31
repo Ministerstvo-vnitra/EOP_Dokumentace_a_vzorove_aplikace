@@ -1,0 +1,11 @@
+framework module ReaderConnectionWrapper {
+  umbrella header "ReaderConnectionWrapper.h"
+
+  export *
+  module * { export * }
+}
+
+module ReaderConnectionWrapper.Swift {
+    header "ReaderConnectionWrapper-Swift.h"
+    requires objc
+}

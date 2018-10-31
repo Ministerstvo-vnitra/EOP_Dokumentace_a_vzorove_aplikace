@@ -1,0 +1,11 @@
+framework module FeitianReader {
+  umbrella header "FeitianReader.h"
+
+  export *
+  module * { export * }
+}
+
+module FeitianReader.Swift {
+    header "FeitianReader-Swift.h"
+    requires objc
+}

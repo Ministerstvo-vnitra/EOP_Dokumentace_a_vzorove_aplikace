@@ -1,0 +1,11 @@
+framework module GemaltoReader {
+  umbrella header "GemaltoReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module GemaltoReader.Swift {
+    header "GemaltoReader-Swift.h"
+    requires objc
+}

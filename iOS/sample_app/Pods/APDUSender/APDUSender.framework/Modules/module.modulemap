@@ -1,0 +1,11 @@
+framework module APDUSender {
+  umbrella header "APDUSender.h"
+
+  export *
+  module * { export * }
+}
+
+module APDUSender.Swift {
+    header "APDUSender-Swift.h"
+    requires objc
+}

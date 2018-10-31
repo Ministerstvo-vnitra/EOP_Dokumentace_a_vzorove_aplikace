@@ -1,0 +1,6 @@
+framework module Pods_apduDemoAppTests {
+  umbrella header "Pods-apduDemoAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

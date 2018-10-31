@@ -1,0 +1,76 @@
+PODS:
+  - ACSReader (0.4.9):
+    - ACSSDKWrapper (~> 0.2.1)
+    - ReaderConnectionWrapper (~> 0.5.3)
+  - ACSSDKWrapper (0.2.1)
+  - AheadOpenSSL (0.2.4)
+  - AheadTLV (0.1.3)
+  - APDUSDK (0.1.4):
+    - APDUSender (~> 0.2.4)
+  - APDUSender (0.2.4):
+    - AheadOpenSSL (~> 0.2.4)
+    - AheadTLV (~> 0.1.3)
+    - CardConnectionWrapper (~> 0.3.3)
+  - CardConnectionWrapper (0.3.3)
+  - Cartography (3.1.0)
+  - FeitianReader (0.4.9):
+    - FeitianSDKWrapper (~> 0.2.5)
+    - ReaderConnectionWrapper (~> 0.5.3)
+  - FeitianSDKWrapper (0.2.5)
+  - GemaltoReader (0.5.4):
+    - GemaltoSDKWrapper (~> 0.2.2)
+    - ReaderConnectionWrapper (~> 0.5.3)
+  - GemaltoSDKWrapper (0.2.2)
+  - R.swift (5.0.0.alpha.2):
+    - R.swift.Library (~> 5.0.0.alpha.2)
+  - R.swift.Library (5.0.0.alpha.2)
+  - ReaderConnectionWrapper (0.5.3):
+    - CardConnectionWrapper (~> 0.3.3)
+
+DEPENDENCIES:
+  - ACSReader
+  - APDUSDK
+  - Cartography
+  - FeitianReader
+  - GemaltoReader
+  - R.swift (= 5.0.0.alpha.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cartography
+    - R.swift
+    - R.swift.Library
+  https://github.com/Ministerstvo-vnitra/EOP_iOS_podspecs.git:
+    - ACSReader
+    - ACSSDKWrapper
+    - AheadOpenSSL
+    - AheadTLV
+    - APDUSDK
+    - APDUSender
+    - CardConnectionWrapper
+    - FeitianReader
+    - FeitianSDKWrapper
+    - GemaltoReader
+    - GemaltoSDKWrapper
+    - ReaderConnectionWrapper
+
+SPEC CHECKSUMS:
+  ACSReader: a6724fe14407eaf88dd110ccaf043a99924ea171
+  ACSSDKWrapper: 2a2849c5a0b1ff44aa347bc6e1ae354faaf8a147
+  AheadOpenSSL: 117c3a13c7b9a80a8818caf2f384ac5b27838d5e
+  AheadTLV: a657cfec16e9c2d8bec058bb39bf4bb54207bab4
+  APDUSDK: feafd82ad5420cb004eba8ee2c4eb9fa69f18c22
+  APDUSender: fe31ed04533fe32a597d579d111725b357426767
+  CardConnectionWrapper: 9c74ff5da288cb940366c97a81d10a904b8d0314
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  FeitianReader: 5e6d81356b8f2e1e4cabe3ef4c170694143981ae
+  FeitianSDKWrapper: 727e4f19ab080614f02ca7400c7fdc8aa0fcbd39
+  GemaltoReader: 36594bf5959a800c53eab9f20a9faab19fca81f5
+  GemaltoSDKWrapper: 91bc5bb5775aaf0b67d30965e9b94a75b04c12e2
+  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
+  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
+  ReaderConnectionWrapper: 4a73a5ef7cd7052ee858de08ec990506b0f8c6cb
+
+PODFILE CHECKSUM: 07184ac45a2c26e3c15f5e32d992894ec4916fce
+
+COCOAPODS: 1.5.3

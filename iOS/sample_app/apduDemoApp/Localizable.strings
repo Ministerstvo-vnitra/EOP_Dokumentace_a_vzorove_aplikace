@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  apduDemoApp
+
+  Created by Marek on 14/03/2018.
+  Copyright © 2018 AHEAD iTec, s.r.o. All rights reserved.
+*/
+
+"OK" = "OK";
+"Success" = "Success";
+"Cancel" = "Cancel";
+"BLETableViewTitle" = "Demo Table View";
+"PairingSuccess" = "Paring successful";
+"PairedDevices" = "Paired devices";
+"SelectDeviceMessage" = "Please select a device";
+"NoBluetooth" = "Bluetooth is turned off";
+"Gemalto" = "Gemalto";
+"Feitian" = "Feitian";
+"SelectManufacturer" = "Select a manufacturer";
+"headerId" = "headerId";
+"cellId" = "cellId";
+"SigningError" = "An error occured during Signing";
+"WrongStatusWord" = "Wrong Status Word: ";
+"WrongReaderStatus" = "Wrong Status Word: ";

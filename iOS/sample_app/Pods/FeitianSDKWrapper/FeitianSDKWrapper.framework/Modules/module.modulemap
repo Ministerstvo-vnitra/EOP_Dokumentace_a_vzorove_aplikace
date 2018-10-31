@@ -1,0 +1,11 @@
+framework module FeitianSDKWrapper {
+  umbrella header "FeitianSDKWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module FeitianSDKWrapper.Swift {
+    header "FeitianSDKWrapper-Swift.h"
+    requires objc
+}

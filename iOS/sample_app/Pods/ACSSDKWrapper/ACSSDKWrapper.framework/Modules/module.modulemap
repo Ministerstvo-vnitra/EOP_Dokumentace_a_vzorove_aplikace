@@ -1,0 +1,11 @@
+framework module ACSSDKWrapper {
+  umbrella header "ACSSDKWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ACSSDKWrapper.Swift {
+    header "ACSSDKWrapper-Swift.h"
+    requires objc
+}

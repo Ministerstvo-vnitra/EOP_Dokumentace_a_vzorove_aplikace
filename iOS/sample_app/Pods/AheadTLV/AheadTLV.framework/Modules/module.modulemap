@@ -1,0 +1,11 @@
+framework module AheadTLV {
+  umbrella header "AheadTLV.h"
+
+  export *
+  module * { export * }
+}
+
+module AheadTLV.Swift {
+    header "AheadTLV-Swift.h"
+    requires objc
+}

@@ -1,0 +1,11 @@
+framework module APDUSDK {
+  umbrella header "APDUSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module APDUSDK.Swift {
+    header "APDUSDK-Swift.h"
+    requires objc
+}

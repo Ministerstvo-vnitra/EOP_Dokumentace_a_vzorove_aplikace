@@ -1,0 +1,11 @@
+framework module ACSReader {
+  umbrella header "ACSReader.h"
+
+  export *
+  module * { export * }
+}
+
+module ACSReader.Swift {
+    header "ACSReader-Swift.h"
+    requires objc
+}

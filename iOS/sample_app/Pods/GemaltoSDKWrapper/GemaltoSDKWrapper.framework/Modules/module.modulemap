@@ -1,0 +1,11 @@
+framework module GemaltoSDKWrapper {
+  umbrella header "GemaltoSDKWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module GemaltoSDKWrapper.Swift {
+    header "GemaltoSDKWrapper-Swift.h"
+    requires objc
+}
