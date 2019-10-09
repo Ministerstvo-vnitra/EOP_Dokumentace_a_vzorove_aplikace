@@ -1,8 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-#source ’https://gitlab.monetplus.cz/AHE_PODS/podspecs.git'
-#source 'https://github.com/monetplus/EOP_iOS_Podspecs.git'
 source 'https://github.com/Ministerstvo-vnitra/EOP_iOS_podspecs.git'
-#source ‘https://gitlab.monetplus.cz/AHE_EOP/BLE-Readers-iOS-Podspecs.git’
 
 use_frameworks!
 
@@ -23,7 +20,7 @@ target 'apduDemoApp' do
   pod 'GemaltoReader'
   pod 'ACSReader'
   pod 'FeitianReader'
-  pod 'R.swift', '5.0.0.alpha.2'
+  pod 'R.swift'
   pod 'Cartography'
   pod 'APDUSDK'
 

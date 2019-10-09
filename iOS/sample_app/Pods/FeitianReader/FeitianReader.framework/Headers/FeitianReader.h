@@ -2,11 +2,11 @@
 //  FeitianReader.h
 //  FeitianReader
 //
-//  Created by Jakub Mejtský on 30/10/2018.
-//  Copyright © 2018 AHEAD iTec, s.r.o. All rights reserved.
+//  Created by Jakub Mejtský on 06/10/2019.
+//  Copyright © 2019 AHEAD iTec. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for FeitianReader.
 FOUNDATION_EXPORT double FeitianReaderVersionNumber;

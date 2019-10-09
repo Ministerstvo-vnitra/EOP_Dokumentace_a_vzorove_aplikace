@@ -1,0 +1,11 @@
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/GemaltoReader
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/CardConnectionWrapper" "${PODS_ROOT}/GemaltoReader" "${PODS_ROOT}/GemaltoSDKWrapper" "${PODS_ROOT}/ReaderConnectionWrapper"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+OTHER_LDFLAGS = $(inherited) -framework "AudioToolbox" -framework "CardConnectionWrapper" -framework "CoreBluetooth" -framework "ExternalAccessory" -framework "GemaltoSDKWrapper" -framework "ReaderConnectionWrapper" -framework "Security" -framework "miniDriver"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/GemaltoReader
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

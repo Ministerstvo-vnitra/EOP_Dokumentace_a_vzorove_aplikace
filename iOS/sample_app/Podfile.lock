@@ -1,31 +1,31 @@
 PODS:
-  - ACSReader (0.4.9):
-    - ACSSDKWrapper (~> 0.2.1)
-    - ReaderConnectionWrapper (~> 0.5.3)
-  - ACSSDKWrapper (0.2.1)
-  - AheadOpenSSL (0.2.4)
-  - AheadTLV (0.1.3)
-  - APDUSDK (0.1.4):
-    - APDUSender (~> 0.2.4)
-  - APDUSender (0.2.4):
-    - AheadOpenSSL (~> 0.2.4)
-    - AheadTLV (~> 0.1.3)
-    - CardConnectionWrapper (~> 0.3.3)
-  - CardConnectionWrapper (0.3.3)
-  - Cartography (3.1.0)
-  - FeitianReader (0.4.9):
-    - FeitianSDKWrapper (~> 0.2.5)
-    - ReaderConnectionWrapper (~> 0.5.3)
-  - FeitianSDKWrapper (0.2.5)
-  - GemaltoReader (0.5.4):
-    - GemaltoSDKWrapper (~> 0.2.2)
-    - ReaderConnectionWrapper (~> 0.5.3)
-  - GemaltoSDKWrapper (0.2.2)
-  - R.swift (5.0.0.alpha.2):
-    - R.swift.Library (~> 5.0.0.alpha.2)
-  - R.swift.Library (5.0.0.alpha.2)
-  - ReaderConnectionWrapper (0.5.3):
-    - CardConnectionWrapper (~> 0.3.3)
+  - ACSReader (0.4.10):
+    - ACSSDKWrapper (~> 0.2.2)
+    - ReaderConnectionWrapper (~> 0.5.4)
+  - ACSSDKWrapper (0.2.2)
+  - AheadOpenSSL (0.2.5)
+  - AheadTLV (0.1.4)
+  - APDUSDK (0.1.5):
+    - APDUSender (~> 0.2.5)
+  - APDUSender (0.2.5):
+    - AheadOpenSSL (~> 0.2.5)
+    - AheadTLV (~> 0.1.4)
+    - CardConnectionWrapper (~> 0.3.4)
+  - CardConnectionWrapper (0.3.4)
+  - Cartography (4.0.0)
+  - FeitianReader (0.4.10):
+    - FeitianSDKWrapper (~> 0.2.6)
+    - ReaderConnectionWrapper (~> 0.5.4)
+  - FeitianSDKWrapper (0.2.6)
+  - GemaltoReader (0.5.6):
+    - GemaltoSDKWrapper (~> 0.2.3)
+    - ReaderConnectionWrapper (~> 0.5.4)
+  - GemaltoSDKWrapper (0.2.3)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - ReaderConnectionWrapper (0.5.4):
+    - CardConnectionWrapper (~> 0.3.4)
 
 DEPENDENCIES:
   - ACSReader
@@ -33,10 +33,10 @@ DEPENDENCIES:
   - Cartography
   - FeitianReader
   - GemaltoReader
-  - R.swift (= 5.0.0.alpha.2)
+  - R.swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Cartography
     - R.swift
     - R.swift.Library
@@ -55,22 +55,22 @@ SPEC REPOS:
     - ReaderConnectionWrapper
 
 SPEC CHECKSUMS:
-  ACSReader: a6724fe14407eaf88dd110ccaf043a99924ea171
-  ACSSDKWrapper: 2a2849c5a0b1ff44aa347bc6e1ae354faaf8a147
-  AheadOpenSSL: 117c3a13c7b9a80a8818caf2f384ac5b27838d5e
-  AheadTLV: a657cfec16e9c2d8bec058bb39bf4bb54207bab4
-  APDUSDK: feafd82ad5420cb004eba8ee2c4eb9fa69f18c22
-  APDUSender: fe31ed04533fe32a597d579d111725b357426767
-  CardConnectionWrapper: 9c74ff5da288cb940366c97a81d10a904b8d0314
-  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
-  FeitianReader: 5e6d81356b8f2e1e4cabe3ef4c170694143981ae
-  FeitianSDKWrapper: 727e4f19ab080614f02ca7400c7fdc8aa0fcbd39
-  GemaltoReader: 36594bf5959a800c53eab9f20a9faab19fca81f5
-  GemaltoSDKWrapper: 91bc5bb5775aaf0b67d30965e9b94a75b04c12e2
-  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
-  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
-  ReaderConnectionWrapper: 4a73a5ef7cd7052ee858de08ec990506b0f8c6cb
+  ACSReader: d0a2cd9d5ee6ce536d6a461f4c25a9f1b3f4d98c
+  ACSSDKWrapper: fcf725c48780738f5edc33ef7e695c36377f13de
+  AheadOpenSSL: 49f339428e3dc8a27bfb5059c97a2d58b47f370e
+  AheadTLV: 04d81df5ffb0f88d413879ae0b70de0b52cbe2c7
+  APDUSDK: 6633193b0490d5747f2fb78e53b4e0ddcd919fec
+  APDUSender: 89e57bccb0b7921617ad8c216bc38afe56aa3b04
+  CardConnectionWrapper: 0e0452c708ef283b57174d850af254eae2c1beeb
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  FeitianReader: f1e33199a5f8c30c10b32a13b7a5e90b1b29dd4d
+  FeitianSDKWrapper: 2aebea299f7d7d8d3a84b3d141b5016829775ab9
+  GemaltoReader: 15366a49cffc3a1d48971464b698feade34a6edb
+  GemaltoSDKWrapper: 592a6ec5fc248a5ff4e986fd9f20debbbd8a76d0
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReaderConnectionWrapper: 8f927b1dc1ee092bee10cf532862de874c9660e7
 
-PODFILE CHECKSUM: 07184ac45a2c26e3c15f5e32d992894ec4916fce
+PODFILE CHECKSUM: f6bcdc053b253379814056329e86ed8794296759
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.0

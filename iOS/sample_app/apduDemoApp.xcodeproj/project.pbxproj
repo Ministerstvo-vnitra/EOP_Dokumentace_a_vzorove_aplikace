@@ -407,12 +407,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh",
 				"${PODS_ROOT}/ACSReader/ACSReader.framework",
 				"${PODS_ROOT}/ACSSDKWrapper/ACSSDKWrapper.framework",
 				"${PODS_ROOT}/APDUSDK/APDUSDK.framework",
 				"${PODS_ROOT}/APDUSender/APDUSender.framework",
-				"${PODS_ROOT}/AheadOpenSSL/AheadOpenSSL.framework",
+				"${PODS_ROOT}/AheadOpenSSL/AheadOpenSSL_0.2.5/AheadOpenSSL.framework",
 				"${PODS_ROOT}/AheadTLV/AheadTLV.framework",
 				"${PODS_ROOT}/CardConnectionWrapper/CardConnectionWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
@@ -444,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EAEE3B162057D04700040251 /* Run Script */ = {
@@ -453,13 +453,15 @@
 			files = (
 			);
 			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = "Run Script";
 			outputPaths = (
+				$SRCROOT/apduDemoApp/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/apduDemoApp\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/apduDemoApp/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -655,7 +657,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.idgo800.BluetoothSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -680,7 +682,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.idgo800.BluetoothSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

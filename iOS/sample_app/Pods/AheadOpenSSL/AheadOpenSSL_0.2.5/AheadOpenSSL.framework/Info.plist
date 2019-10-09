@@ -1,0 +1,28 @@
+// !!! BINARY PROPERTY LIST WARNING !!!
+//
+// The pretty-printed property list below has been created
+// from a binary version on disk and should not be saved as
+// the ASCII format is a subset of the binary representation!
+//
+{	BuildMachineOSBuild = "19A582a";
+	CFBundleDevelopmentRegion = "en";
+	CFBundleExecutable = "AheadOpenSSL";
+	CFBundleIdentifier = "org.cocoapods.AheadOpenSSL";
+	CFBundleInfoDictionaryVersion = "6.0";
+	CFBundleName = "AheadOpenSSL";
+	CFBundlePackageType = "FMWK";
+	CFBundleShortVersionString = "0.2.5";
+	CFBundleSignature = "????";
+	CFBundleSupportedPlatforms = ( "iPhoneOS" );
+	CFBundleVersion = "1";
+	DTCompiler = "com.apple.compilers.llvm.clang.1_0";
+	DTPlatformBuild = "17A566";
+	DTPlatformName = "iphoneos";
+	DTPlatformVersion = "13.0";
+	DTSDKBuild = "17A566";
+	DTSDKName = "iphoneos13.0";
+	DTXcode = "1100";
+	DTXcodeBuild = "11A420a";
+	MinimumOSVersion = "9.0";
+	UIDeviceFamily = ( 1, 2 );
+}
