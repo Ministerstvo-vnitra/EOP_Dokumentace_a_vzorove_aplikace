@@ -120,19 +120,15 @@ class MenuViewController: UIViewController {
 	}
 	
 	private func insertOutputText(text: String) {
-		DispatchQueue.main.async {
-			self.outputDataView.insertText(text)
-		}
+        outputDataView.insertText(text)
 	}
 	
 	private func endSigningAndUpdateUI(text: String) {
-		DispatchQueue.main.async {
-			self.outputDataView.insertText(text)
-			self.signButton.isUserInteractionEnabled = true
-			self.signButton.alpha = 1.0
+        outputDataView.insertText(text)
+        signButton.isUserInteractionEnabled = true
+        signButton.alpha = 1.0
 			
-			self.indicator.stopAnimating()
-		}
+        indicator.stopAnimating()
 	}
 	
 	private func initAPDUProvider(delegate: APDUProviderInstanceDelegate) {
@@ -146,30 +142,37 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: GeneralDelegate {
 	func onFailed(stringConvertible: CustomStringConvertible) {
-		print("Error: \(stringConvertible)")
-		
-		let alertController = UIAlertController(title: R.string.localizable.signingError(), message: String(describing: stringConvertible), preferredStyle: .alert)
-		alertController.addAction(UIAlertAction(title: R.string.localizable.oK(), style: .default, handler: {(alert: UIAlertAction!) in
-			self.dismiss(animated: true, completion: nil)
-		}))
-		present(alertController, animated: true, completion: nil)
-		endSigningAndUpdateUI(text: "Error: \(stringConvertible)")
+        DispatchQueue.main.async {
+            print("Error: \(stringConvertible)")
+
+            let alertController = UIAlertController(title: R.string.localizable.signingError(), message: String(describing: stringConvertible), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: R.string.localizable.oK(), style: .default, handler: {(alert: UIAlertAction!) in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alertController, animated: true, completion: nil)
+            self.endSigningAndUpdateUI(text: "Error: \(stringConvertible)")
+        }
+
 	}
 	
 	func onFailed(statusWord: StatusWord) {
-		print("Wrong status word: \(statusWord)")
-		
-		let alertController = UIAlertController(title: R.string.localizable.signingError(), message: R.string.localizable.wrongStatusWord() + String(describing: statusWord), preferredStyle: .alert)
-		alertController.addAction(UIAlertAction(title: R.string.localizable.oK(), style: .default, handler: {(alert: UIAlertAction!) in
-			self.dismiss(animated: true, completion: nil)
-		}))
-		present(alertController, animated: true, completion: nil)
-		endSigningAndUpdateUI(text: "Wrong status word: \(statusWord)")
+        DispatchQueue.main.async {
+            print("Wrong status word: \(statusWord)")
+
+            let alertController = UIAlertController(title: R.string.localizable.signingError(), message: R.string.localizable.wrongStatusWord() + String(describing: statusWord), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: R.string.localizable.oK(), style: .default, handler: {(alert: UIAlertAction!) in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alertController, animated: true, completion: nil)
+            self.endSigningAndUpdateUI(text: "Wrong status word: \(statusWord)")
+        }
 	}
 	
 	func onFailed(error: Errors) {
-		print("Error: \(error)")
-		endSigningAndUpdateUI(text: "Error: \(error)")
+        DispatchQueue.main.async {
+            print("Error: \(error)")
+            self.endSigningAndUpdateUI(text: "Error: \(error)")
+        }
 	}
 }
 
@@ -182,20 +185,22 @@ extension MenuViewController: APDUProviderInstanceDelegate {
 
 extension MenuViewController: ContainerArrayDelegate {
 	func onSuccess(result: [Container]) {
-		guard result.count > 0 else {
-			print("No container found.")
-			endSigningAndUpdateUI(text: "Error: No container found.")
-			return
-		}
-		
-		containers = result
-		
-		guard let container = containers?[0] else {
-			print("Couldn't select the first container.")
-			return
-		}
-		insertOutputText(text: "\(result.count) containers found\n")
-		apduProvider?.signData(container: container, data: Array(isoformatter.string(from: date).utf8), algID: AlgorithmID.rsaSha256pkcs1padding, delegate: self)
+        DispatchQueue.main.async {
+            guard result.count > 0 else {
+                print("No container found.")
+                self.endSigningAndUpdateUI(text: "Error: No container found.")
+                return
+            }
+
+            self.containers = result
+
+            guard let container = self.containers?[0] else {
+                print("Couldn't select the first container.")
+                return
+            }
+            self.insertOutputText(text: "\(result.count) containers found\n")
+            self.apduProvider?.signData(container: container, data: Array(self.isoformatter.string(from: self.date).utf8), algID: AlgorithmID.rsaSha256pkcs1padding, delegate: self)
+        }
 	}
 }
 
@@ -206,20 +211,24 @@ extension MenuViewController: VerifyDelegate {
 	}
 	
 	func onSuccessVerify() {
-		if let continueSigningNotNil = self.continueSigning {
-			self.continueSigning = nil
-			continueSigningNotNil()
-		} else {
-			print("Verification successful")
-			insertOutputText(text: "Verification successful\n")
-		}
+        DispatchQueue.main.async {
+            if let continueSigningNotNil = self.continueSigning {
+                self.continueSigning = nil
+                continueSigningNotNil()
+            } else {
+                print("Verification successful")
+                self.insertOutputText(text: "Verification successful\n")
+            }
+        }
 	}
 }
 
 extension MenuViewController: VerifyUsingSessionPinDelegate {
 	func onSuccessVerifyUsingSessionPin() {
-		print("Verification using session pin successful")
-		insertOutputText(text: "Verification using session pin successful\n")
+        DispatchQueue.main.async {
+            print("Verification using session pin successful")
+            self.insertOutputText(text: "Verification using session pin successful\n")
+        }
 	}
 }
 
@@ -231,9 +240,11 @@ extension MenuViewController: SignDelegate {
 	}
 	
 	func onSuccessSign(data: [UInt8]) {
-		print("Sign successful")
-		print(data)
-		endSigningAndUpdateUI(text: "Signing successful\n" + String(describing: data))
+        DispatchQueue.main.async {
+            print("Sign successful")
+            print(data)
+            self.endSigningAndUpdateUI(text: "Signing successful\n" + String(describing: data))
+        }
 	}
 }
 
