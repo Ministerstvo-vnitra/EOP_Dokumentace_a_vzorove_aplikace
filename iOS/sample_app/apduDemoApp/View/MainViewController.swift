@@ -7,10 +7,10 @@
 
 import UIKit
 import Cartography
-import GemaltoReader
-import FeitianReader
-import ACSReader
+import FeitianReaderFramework
+import ACSReaderFramework
 import ReaderConnectionWrapper
+import AirIDReaderFramework
 
 class MainViewController: UIViewController {
 
@@ -22,19 +22,19 @@ class MainViewController: UIViewController {
 	var manufacturersView: ManufacturerTableView?
 	var discoveredReaders: [SmartCardReaderProtocol] = []
 	
-	let testAppSignature = ["64", "1c", "55", "88", "58", "53", "a4", "00", "b2", "d1", "64",
-							"0a", "bb", "86", "73", "01"].compactMap { UInt8($0, radix: 16)}
-	
 	var connectionService: CombinedConnectionService?
 	var menuViewController: MenuViewController?
 	
+    var airIDConnectionService: AirIDConnectionService?
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+        airIDConnectionService = AirIDConnectionService()
 		connectionService = CombinedConnectionService(services: [
-			GemaltoConnectionService(gemaltoApplicationSignature: testAppSignature),
-																 FeitianConnectionService(),
-																 ACSConnectionService()])
+            airIDConnectionService!,
+            FeitianConnectionService(),
+            ACSConnectionService()])
 		connectionService?.delegate = self
 	}
 	

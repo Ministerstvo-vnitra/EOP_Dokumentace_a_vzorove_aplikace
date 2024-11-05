@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "cartography",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:robb/Cartography.git",
+      "state" : {
+        "revision" : "b75197ea134f42b5feafb04b526b37eb1a41034b",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "eop_ios_aheadtlv",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_AheadTLV.git",
+      "state" : {
+        "revision" : "01cddc26429939b471d53343d3bddd6e0678f07e",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "eop_ios_apdusdk",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSDK.git",
+      "state" : {
+        "revision" : "00d2cdc4df1c85fbdceeb6e4163ef7ea3bb97b6c",
+        "version" : "2.0.3"
+      }
+    },
+    {
+      "identity" : "eop_ios_apdusender",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSender.git",
+      "state" : {
+        "revision" : "7397581cda0bc507a20b797848da24c825f133e7",
+        "version" : "2.0.2"
+      }
+    },
+    {
+      "identity" : "eop_ios_cardconnectionwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_CardConnectionWrapper.git",
+      "state" : {
+        "revision" : "3e42ac74c18bcadb1725b4c68c0126ca3d1c95f0",
+        "version" : "2.0.3"
+      }
+    },
+    {
+      "identity" : "eop_ios_readerconnectionwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_ReaderConnectionWrapper.git",
+      "state" : {
+        "revision" : "a33fcafb86bd986e1c7c53337a000449ad0f00d3",
+        "version" : "2.0.3"
+      }
+    },
+    {
+      "identity" : "eop_ios_readers",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_Readers.git",
+      "state" : {
+        "revision" : "22bc880b2e662e6756f524aafff1274a61ad0137",
+        "version" : "2.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

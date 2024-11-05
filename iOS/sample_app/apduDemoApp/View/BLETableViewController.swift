@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Cartography
 import CoreBluetooth
 
 //
@@ -17,9 +16,9 @@ class BLETableViewController: UITableViewController {
 	var centralManager: CBCentralManager?
 	var peripherals = Array<CBPeripheral>()
 	
-	private let headerId = R.string.localizable.headerId()
-	private let cellId = R.string.localizable.cellId()
-	
+	private let headerId = NSLocalizedString("headerId", comment: "")
+	private let cellId = NSLocalizedString("cellId", comment: "")
+
 	//
 	// MARK :- HEADER
 	//
@@ -60,7 +59,7 @@ class BLETableViewController: UITableViewController {
 		//Initialise CoreBluetooth Central Manager
 		centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
 		
-		title = R.string.localizable.bleTableViewTitle()
+		title = NSLocalizedString("BLETableViewTitle", comment: "")
 		view.backgroundColor = .white
 		tableView.backgroundColor = .lightGray
 		tableView.register(ManufacturerViewHeader.self, forHeaderFooterViewReuseIdentifier: headerId)
@@ -74,12 +73,20 @@ extension BLETableViewController: CBCentralManagerDelegate {
 			self.centralManager?.scanForPeripherals(withServices: nil, options: nil)
 		}
 		else {
-			let alertController: UIAlertController = UIAlertController(title: R.string.localizable.noBluetooth() , message: R.string.localizable.noBluetooth(), preferredStyle: UIAlertController.Style.alert)
+			let alertController: UIAlertController = UIAlertController(
+                title: NSLocalizedString("NoBluetooth", comment: ""),
+                message: NSLocalizedString("NoBluetooth", comment: ""),
+                preferredStyle: UIAlertController.Style.alert
+            )
 			alertController.view.backgroundColor = UIColor.white
 			alertController.view.layer.cornerRadius = 8.0
 			
-			let actionCancel = UIAlertAction(title: R.string.localizable.cancel(), style: .cancel, handler: {(action:UIAlertAction) in
-			})
+			let actionCancel = UIAlertAction(
+                title: NSLocalizedString("Cancel", comment: ""),
+                style: .cancel,
+                handler: {(action:UIAlertAction) in
+                }
+            )
 			alertController.addAction(actionCancel)
 			self.present(alertController, animated: true, completion: nil)
 		}

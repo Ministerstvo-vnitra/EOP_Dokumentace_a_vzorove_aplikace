@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Cartography
 
 
 //
@@ -19,7 +18,7 @@ class ManufacturerViewHeader: UITableViewHeaderFooterView {
 		super.init(reuseIdentifier: reuseIdentifier)
 		
 		contentView.backgroundColor = UIColor.white
-		self.textLabel?.text = R.string.localizable.selectManufacturer()
+		self.textLabel?.text = NSLocalizedString("SelectManufacturer", comment: "")
 	}
 	
 	required init?(coder aDecoder: NSCoder) {

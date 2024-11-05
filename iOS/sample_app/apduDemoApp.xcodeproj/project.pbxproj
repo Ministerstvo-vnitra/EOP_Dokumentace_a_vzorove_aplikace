@@ -3,12 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58496A7E6782D419497CD8A2 /* Pods_apduDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54260EFC2C179D4728B0F69B /* Pods_apduDemoAppTests.framework */; };
-		63AC06D37C7604C4FFAD5F8A /* Pods_apduDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1157B6943261A4711D6BC33D /* Pods_apduDemoApp.framework */; };
+		2FDE99222CAFD0870000E5BC /* APDUSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2FDE99212CAFD0870000E5BC /* APDUSDK */; };
+		2FE11CCD2C8769F500D7CCF2 /* APDUSenderFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CCC2C8769F500D7CCF2 /* APDUSenderFramework */; };
+		2FE11CD02C876A2E00D7CCF2 /* ACSReaderFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CCF2C876A2E00D7CCF2 /* ACSReaderFramework */; };
+		2FE11CD22C876A2E00D7CCF2 /* AirIDReaderFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CD12C876A2E00D7CCF2 /* AirIDReaderFramework */; };
+		2FE11CD42C876A2E00D7CCF2 /* FeitianReaderFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CD32C876A2E00D7CCF2 /* FeitianReaderFramework */; };
+		2FE11CD72C876A5500D7CCF2 /* AheadTLV in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CD62C876A5500D7CCF2 /* AheadTLV */; };
+		2FE11CDA2C876A6C00D7CCF2 /* ReaderConnectionWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CD92C876A6C00D7CCF2 /* ReaderConnectionWrapper */; };
+		2FE11CDD2C876A7F00D7CCF2 /* CardConnectionWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE11CDC2C876A7F00D7CCF2 /* CardConnectionWrapper */; };
+		772B93A32C05DF7500332801 /* Cartography in Frameworks */ = {isa = PBXBuildFile; productRef = 772B93A22C05DF7500332801 /* Cartography */; };
 		EA13555F217F15FC00FD35E7 /* CombinedConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13555E217F15FC00FD35E7 /* CombinedConnectionService.swift */; };
 		EA14E0422063F3E700400C49 /* ManufacturerViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14E0412063F3E700400C49 /* ManufacturerViewHeader.swift */; };
 		EA2DA9DD2046E3760050C53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2DA9DC2046E3760050C53A /* AppDelegate.swift */; };
@@ -20,7 +27,6 @@
 		EA47F0462085DF4F00337FA3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47F0442085DF4F00337FA3 /* MenuViewController.swift */; };
 		EA47F0472085DF4F00337FA3 /* ManufacturerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47F0452085DF4F00337FA3 /* ManufacturerTableView.swift */; };
 		EA9A94ED205917A8003FF4DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9A94EC205917A8003FF4DF /* Localizable.strings */; };
-		EA9A94EF20591B12003FF4DF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A94EE20591B12003FF4DF /* R.generated.swift */; };
 		EADBDB132057F9B900B7C658 /* BLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDB122057F9B900B7C658 /* BLETableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,25 +47,7 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EA10D5FD206B849400159160 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		1157B6943261A4711D6BC33D /* Pods_apduDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apduDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54260EFC2C179D4728B0F69B /* Pods_apduDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apduDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65C0D52ED9077A4C458E98C9 /* Pods-apduDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apduDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		98A50A092AD741082C79E854 /* Pods-apduDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apduDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp.release.xcconfig"; sourceTree = "<group>"; };
-		BA6FE3C9E0C8547895D73236 /* Pods-apduDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apduDemoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apduDemoAppTests/Pods-apduDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA13555E217F15FC00FD35E7 /* CombinedConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedConnectionService.swift; sourceTree = "<group>"; };
 		EA14E0412063F3E700400C49 /* ManufacturerViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewHeader.swift; sourceTree = "<group>"; };
 		EA2DA9D92046E3760050C53A /* apduDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apduDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,9 +65,7 @@
 		EA47F0442085DF4F00337FA3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		EA47F0452085DF4F00337FA3 /* ManufacturerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManufacturerTableView.swift; sourceTree = "<group>"; };
 		EA9A94EC205917A8003FF4DF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		EA9A94EE20591B12003FF4DF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EADBDB122057F9B900B7C658 /* BLETableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLETableViewController.swift; sourceTree = "<group>"; };
-		F1CFA10AFC11C2180E1F7205 /* Pods-apduDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apduDemoAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apduDemoAppTests/Pods-apduDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +73,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63AC06D37C7604C4FFAD5F8A /* Pods_apduDemoApp.framework in Frameworks */,
+				2FE11CD22C876A2E00D7CCF2 /* AirIDReaderFramework in Frameworks */,
+				2FE11CD72C876A5500D7CCF2 /* AheadTLV in Frameworks */,
+				2FE11CDD2C876A7F00D7CCF2 /* CardConnectionWrapper in Frameworks */,
+				2FDE99222CAFD0870000E5BC /* APDUSDK in Frameworks */,
+				2FE11CCD2C8769F500D7CCF2 /* APDUSenderFramework in Frameworks */,
+				2FE11CD02C876A2E00D7CCF2 /* ACSReaderFramework in Frameworks */,
+				2FE11CDA2C876A6C00D7CCF2 /* ReaderConnectionWrapper in Frameworks */,
+				2FE11CD42C876A2E00D7CCF2 /* FeitianReaderFramework in Frameworks */,
+				772B93A32C05DF7500332801 /* Cartography in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58496A7E6782D419497CD8A2 /* Pods_apduDemoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,11 +102,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69EE90CF84F20D4DAC8B2392 /* Frameworks */ = {
+		77BBDE7D2C05EC4100E8B07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1157B6943261A4711D6BC33D /* Pods_apduDemoApp.framework */,
-				54260EFC2C179D4728B0F69B /* Pods_apduDemoAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,8 +124,7 @@
 				EA2DA9F02046E3760050C53A /* apduDemoAppTests */,
 				EA2DA9FB2046E3760050C53A /* apduDemoAppUITests */,
 				EA2DA9DA2046E3760050C53A /* Products */,
-				69EE90CF84F20D4DAC8B2392 /* Frameworks */,
-				F63F46CEBA4CC4FA3F10164C /* Pods */,
+				77BBDE7D2C05EC4100E8B07B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,7 +149,6 @@
 				EA2DA9E32046E3760050C53A /* Assets.xcassets */,
 				EA2DA9E52046E3760050C53A /* LaunchScreen.storyboard */,
 				EA2DA9E82046E3760050C53A /* Info.plist */,
-				EA9A94EE20591B12003FF4DF /* R.generated.swift */,
 				EA9A94EC205917A8003FF4DF /* Localizable.strings */,
 				EA13555E217F15FC00FD35E7 /* CombinedConnectionService.swift */,
 			);
@@ -217,17 +206,6 @@
 			path = Singletons;
 			sourceTree = "<group>";
 		};
-		F63F46CEBA4CC4FA3F10164C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				65C0D52ED9077A4C458E98C9 /* Pods-apduDemoApp.debug.xcconfig */,
-				98A50A092AD741082C79E854 /* Pods-apduDemoApp.release.xcconfig */,
-				F1CFA10AFC11C2180E1F7205 /* Pods-apduDemoAppTests.debug.xcconfig */,
-				BA6FE3C9E0C8547895D73236 /* Pods-apduDemoAppTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,19 +213,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA2DAA012046E3760050C53A /* Build configuration list for PBXNativeTarget "apduDemoApp" */;
 			buildPhases = (
-				95DEB49D283C75A144B0E1A9 /* [CP] Check Pods Manifest.lock */,
-				EAEE3B162057D04700040251 /* Run Script */,
 				EA2DA9D52046E3760050C53A /* Sources */,
 				EA2DA9D62046E3760050C53A /* Frameworks */,
 				EA2DA9D72046E3760050C53A /* Resources */,
-				EA10D5FD206B849400159160 /* Embed Frameworks */,
-				E45C08499FFEEDE81449BD01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = apduDemoApp;
+			packageProductDependencies = (
+				772B93A22C05DF7500332801 /* Cartography */,
+				2FE11CCC2C8769F500D7CCF2 /* APDUSenderFramework */,
+				2FE11CCF2C876A2E00D7CCF2 /* ACSReaderFramework */,
+				2FE11CD12C876A2E00D7CCF2 /* AirIDReaderFramework */,
+				2FE11CD32C876A2E00D7CCF2 /* FeitianReaderFramework */,
+				2FE11CD62C876A5500D7CCF2 /* AheadTLV */,
+				2FE11CD92C876A6C00D7CCF2 /* ReaderConnectionWrapper */,
+				2FE11CDC2C876A7F00D7CCF2 /* CardConnectionWrapper */,
+				2FDE99212CAFD0870000E5BC /* APDUSDK */,
+			);
 			productName = apduDemoApp;
 			productReference = EA2DA9D92046E3760050C53A /* apduDemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -302,7 +287,6 @@
 					EA2DA9D82046E3760050C53A = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
 					};
 					EA2DA9EC2046E3760050C53A = {
 						CreatedOnToolsVersion = 9.2;
@@ -326,6 +310,15 @@
 				Base,
 			);
 			mainGroup = EA2DA9D02046E3750050C53A;
+			packageReferences = (
+				772B93A12C05DF7500332801 /* XCRemoteSwiftPackageReference "Cartography" */,
+				2FE11CC82C8769CD00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSDK" */,
+				2FE11CCB2C8769F500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSender" */,
+				2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */,
+				2FE11CD52C876A5500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_AheadTLV" */,
+				2FE11CD82C876A6C00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_ReaderConnectionWrapper" */,
+				2FE11CDB2C876A7F00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_CardConnectionWrapper" */,
+			);
 			productRefGroup = EA2DA9DA2046E3760050C53A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -383,86 +376,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95DEB49D283C75A144B0E1A9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-apduDemoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E45C08499FFEEDE81449BD01 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh",
-				"${PODS_ROOT}/ACSReader/ACSReader.framework",
-				"${PODS_ROOT}/ACSSDKWrapper/ACSSDKWrapper.framework",
-				"${PODS_ROOT}/APDUSDK/APDUSDK.framework",
-				"${PODS_ROOT}/APDUSender/APDUSender.framework",
-				"${PODS_ROOT}/AheadOpenSSL/AheadOpenSSL_0.2.5/AheadOpenSSL.framework",
-				"${PODS_ROOT}/AheadTLV/AheadTLV.framework",
-				"${PODS_ROOT}/CardConnectionWrapper/CardConnectionWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
-				"${PODS_ROOT}/FeitianReader/FeitianReader.framework",
-				"${PODS_ROOT}/FeitianSDKWrapper/FeitianSDKWrapper.framework",
-				"${PODS_ROOT}/GemaltoReader/GemaltoReader.framework",
-				"${PODS_ROOT}/GemaltoSDKWrapper/GemaltoSDKWrapper.framework",
-				"${PODS_ROOT}/GemaltoSDKWrapper/miniDriver.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${PODS_ROOT}/ReaderConnectionWrapper/ReaderConnectionWrapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACSReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACSSDKWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APDUSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APDUSender.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AheadOpenSSL.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AheadTLV.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardConnectionWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeitianReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeitianSDKWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GemaltoReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GemaltoSDKWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/miniDriver.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReaderConnectionWrapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apduDemoApp/Pods-apduDemoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EAEE3B162057D04700040251 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = "Run Script";
-			outputPaths = (
-				$SRCROOT/apduDemoApp/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/apduDemoApp/R.generated.swift\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -473,7 +386,6 @@
 				EA14E0422063F3E700400C49 /* ManufacturerViewHeader.swift in Sources */,
 				EA2DA9DF2046E3760050C53A /* MainViewController.swift in Sources */,
 				EA47F0462085DF4F00337FA3 /* MenuViewController.swift in Sources */,
-				EA9A94EF20591B12003FF4DF /* R.generated.swift in Sources */,
 				EA13555F217F15FC00FD35E7 /* CombinedConnectionService.swift in Sources */,
 				EA2DA9DD2046E3760050C53A /* AppDelegate.swift in Sources */,
 				EA47F0472085DF4F00337FA3 /* ManufacturerTableView.swift in Sources */,
@@ -575,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -629,74 +541,84 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		EA2DAA022046E3760050C53A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65C0D52ED9077A4C458E98C9 /* Pods-apduDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = ASQC376HCN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = apduDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.idgo800.BluetoothSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EA2DAA032046E3760050C53A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98A50A092AD741082C79E854 /* Pods-apduDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = ASQC376HCN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = apduDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.idgo800.BluetoothSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		EA2DAA052046E3760050C53A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1CFA10AFC11C2180E1F7205 /* Pods-apduDemoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASQC376HCN;
 				INFOPLIST_FILE = apduDemoAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahead-itec.apduDemoAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -707,14 +629,17 @@
 		};
 		EA2DAA062046E3760050C53A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA6FE3C9E0C8547895D73236 /* Pods-apduDemoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASQC376HCN;
 				INFOPLIST_FILE = apduDemoAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahead-itec.apduDemoAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -730,7 +655,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASQC376HCN;
 				INFOPLIST_FILE = apduDemoAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahead-itec.apduDemoAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -746,7 +675,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASQC376HCN;
 				INFOPLIST_FILE = apduDemoAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahead-itec.apduDemoAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -795,6 +728,113 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FE11CC82C8769CD00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FE11CCB2C8769F500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSender" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSender.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_Readers.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FE11CD52C876A5500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_AheadTLV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_AheadTLV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FE11CD82C876A6C00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_ReaderConnectionWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_ReaderConnectionWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FE11CDB2C876A7F00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_CardConnectionWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_CardConnectionWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		772B93A12C05DF7500332801 /* XCRemoteSwiftPackageReference "Cartography" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:robb/Cartography.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FDE99212CAFD0870000E5BC /* APDUSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CC82C8769CD00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSDK" */;
+			productName = APDUSDK;
+		};
+		2FE11CCC2C8769F500D7CCF2 /* APDUSenderFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CCB2C8769F500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_APDUSender" */;
+			productName = APDUSenderFramework;
+		};
+		2FE11CCF2C876A2E00D7CCF2 /* ACSReaderFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */;
+			productName = ACSReaderFramework;
+		};
+		2FE11CD12C876A2E00D7CCF2 /* AirIDReaderFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */;
+			productName = AirIDReaderFramework;
+		};
+		2FE11CD32C876A2E00D7CCF2 /* FeitianReaderFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */;
+			productName = FeitianReaderFramework;
+		};
+		2FE11CD62C876A5500D7CCF2 /* AheadTLV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CD52C876A5500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_AheadTLV" */;
+			productName = AheadTLV;
+		};
+		2FE11CD92C876A6C00D7CCF2 /* ReaderConnectionWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CD82C876A6C00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_ReaderConnectionWrapper" */;
+			productName = ReaderConnectionWrapper;
+		};
+		2FE11CDC2C876A7F00D7CCF2 /* CardConnectionWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE11CDB2C876A7F00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_CardConnectionWrapper" */;
+			productName = CardConnectionWrapper;
+		};
+		772B93A22C05DF7500332801 /* Cartography */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 772B93A12C05DF7500332801 /* XCRemoteSwiftPackageReference "Cartography" */;
+			productName = Cartography;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA2DA9D12046E3750050C53A /* Project object */;
 }

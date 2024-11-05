@@ -17,9 +17,9 @@ class ManufacturerTableView: UIView, UITableViewDelegate, UITableViewDataSource 
 	var providingConnectionService: CombinedConnectionService
 	var manufacturers: [String]
 	
-	private let headerId = R.string.localizable.headerId()
-	let cellId = R.string.localizable.cellId()
-	
+	private let headerId = NSLocalizedString("headerId", comment: "")
+	let cellId = NSLocalizedString("cellId", comment: "")
+
 	var indicator: UIActivityIndicatorView
 	
 	init(frame: CGRect, connectionService: CombinedConnectionService, indicator: UIActivityIndicatorView) {
