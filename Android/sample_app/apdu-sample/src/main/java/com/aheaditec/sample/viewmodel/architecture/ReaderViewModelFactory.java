@@ -1,13 +1,14 @@
 package com.aheaditec.sample.viewmodel.architecture;
 
 import android.app.Application;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.aheaditec.sample.enums.ReaderType;
-import com.aheaditec.sample.viewmodel.PairingViewModel;
 import com.aheaditec.sample.viewmodel.ConnectViewModel;
+import com.aheaditec.sample.viewmodel.PairingViewModel;
 
 /**
  * Factory for ViewModels adding readerType type parameter into constructor.

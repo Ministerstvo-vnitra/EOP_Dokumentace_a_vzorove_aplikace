@@ -6,7 +6,9 @@ package com.aheaditec.sample.enums;
 
 public enum ReaderType {
     ACS,
-    FEITIAN;
+    FEITIAN,
+    AIR_ID,
+    USB;
 
     public static final String EXTRA_NAME = "readerType";
 }

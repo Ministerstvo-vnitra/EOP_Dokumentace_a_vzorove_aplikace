@@ -1,6 +1,6 @@
 package com.aheaditec.sample.listeners;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.aheaditec.wrapper.Reader;
 import com.aheaditec.wrapper.interfaces.CardReader;

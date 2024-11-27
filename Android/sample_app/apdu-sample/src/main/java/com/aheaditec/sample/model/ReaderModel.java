@@ -1,10 +1,9 @@
 package com.aheaditec.sample.model;
 
-import android.support.annotation.NonNull;
-import android.support.v4.util.Pair;
+import androidx.annotation.NonNull;
+import androidx.core.util.Pair;
 
 import com.aheaditec.apdu.ApduProvider;
-
 import com.aheaditec.apdu.callbacks.ByteArrayCallback;
 import com.aheaditec.apdu.callbacks.CertificateCallback;
 import com.aheaditec.apdu.callbacks.ContainerListCallback;
@@ -22,11 +21,11 @@ import com.aheaditec.apdu.enums.VerifyCodes;
 import com.aheaditec.apdu.structures.ContainerBasic;
 import com.aheaditec.apdu.structures.PinInfoBasic;
 import com.aheaditec.apdu.util.Utils;
+import com.aheaditec.sample.enums.SpinnerOptions;
+import com.aheaditec.sample.listeners.PinEntryListener;
 import com.aheaditec.wrapper.interfaces.CardReader;
 import com.aheaditec.wrapper.interfaces.OnBatteryLevelListener;
 import com.aheaditec.wrapper.interfaces.OnCardStateListener;
-import com.aheaditec.sample.enums.SpinnerOptions;
-import com.aheaditec.sample.listeners.PinEntryListener;
 
 import java.security.PublicKey;
 import java.security.cert.Certificate;
@@ -147,7 +146,7 @@ public class ReaderModel implements InitializeCallback, ByteArrayCallback, Verif
 
     public Single<PinInfoBasic> getPinInfo(@NonNull VerifyCodes pinReference) {
 
-        return Single.<PinInfoBasic>create( emitter -> {
+        return Single.<PinInfoBasic>create(emitter -> {
             if (provider == null) {
                 providerNotInitialized();
                 return;
@@ -331,7 +330,6 @@ public class ReaderModel implements InitializeCallback, ByteArrayCallback, Verif
     private void addToObserver(@NonNull String msg) {
         addToOutputObservable.onNext(msg);
     }
-
 
 
     public Observable<String> getAddToOutputObservable() {

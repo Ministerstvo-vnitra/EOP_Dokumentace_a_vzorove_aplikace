@@ -1,27 +1,30 @@
 package com.aheaditec.sample.activity;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.util.Pair;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
+import androidx.fragment.app.DialogFragment;
+import androidx.lifecycle.ViewModelProviders;
+
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.aheaditec.apdu.structures.PinInfoBasic;
-import com.aheaditec.wrapper.Reader;
 import com.aheaditec.sample.Logger;
+import com.aheaditec.sample.R;
+import com.aheaditec.sample.enums.ReaderType;
+import com.aheaditec.sample.enums.SpinnerOptions;
 import com.aheaditec.sample.listeners.PinEntryListener;
 import com.aheaditec.sample.viewmodel.ApduViewModel;
-import com.aheaditec.sample.R;
-import com.aheaditec.sample.enums.SpinnerOptions;
+import com.aheaditec.wrapper.Manufacturer;
+import com.aheaditec.wrapper.Reader;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -64,13 +67,14 @@ public class ApduActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         Logger.d(TAG, "onCreate - ApduActivity!");
 
         if (!getIntent().hasExtra(READER_TAG)) {
             throw new IllegalArgumentException("Activity is missing important argument.");
         }
         Reader reader = getIntent().getParcelableExtra(READER_TAG);
+        isBluetoothReader = reader.getManufacturer() != Manufacturer.USB;
+        super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_apdu);
         ButterKnife.bind(this, this);

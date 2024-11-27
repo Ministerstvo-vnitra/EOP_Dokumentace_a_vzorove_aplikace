@@ -1,9 +1,10 @@
 package com.aheaditec.sample.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.AndroidViewModel;
 
 import com.aheaditec.wrapper.interfaces.CardReader;
 

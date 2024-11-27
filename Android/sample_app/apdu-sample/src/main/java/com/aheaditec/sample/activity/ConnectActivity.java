@@ -1,24 +1,27 @@
 package com.aheaditec.sample.activity;
 
-import android.arch.lifecycle.ViewModelProviders;
+import static com.aheaditec.sample.enums.ReaderType.EXTRA_NAME;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.aheaditec.wrapper.Reader;
 import com.aheaditec.sample.R;
 import com.aheaditec.sample.adapters.ConnectReadersAdapter;
 import com.aheaditec.sample.enums.ReaderType;
 import com.aheaditec.sample.viewmodel.ConnectViewModel;
 import com.aheaditec.sample.viewmodel.architecture.ReaderViewModelFactory;
+import com.aheaditec.wrapper.Reader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +29,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static com.aheaditec.sample.enums.ReaderType.EXTRA_NAME;
 
 /**
  * Activity used to connect to specified brand of reader (ACS, Gemalto, Feitian).
@@ -58,12 +59,13 @@ public class ConnectActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
         if (!getIntent().hasExtra(EXTRA_NAME)) {
             throw new IllegalArgumentException("Activity is missing important argument.");
         }
         readerType = (ReaderType) getIntent().getSerializableExtra(EXTRA_NAME);
+        isBluetoothReader = readerType != ReaderType.USB;
+        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_connect);
         ButterKnife.bind(this);
 

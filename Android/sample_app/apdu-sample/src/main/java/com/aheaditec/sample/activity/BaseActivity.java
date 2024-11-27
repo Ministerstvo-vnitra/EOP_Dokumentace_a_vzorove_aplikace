@@ -11,8 +11,9 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.aheaditec.sample.Logger;
 
@@ -23,11 +24,15 @@ import com.aheaditec.sample.Logger;
 public class BaseActivity extends AppCompatActivity {
     private static final String TAG = BaseActivity.class.getSimpleName();
 
+    protected Boolean isBluetoothReader = true;
+
     @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (!isBluetoothReader) {
+            return;
+        }
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(bluetoothReceiver, filter);
 
@@ -42,6 +47,9 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (!isBluetoothReader) {
+            return;
+        }
         unregisterReceiver(bluetoothReceiver);
     }
 
@@ -96,7 +104,7 @@ public class BaseActivity extends AppCompatActivity {
                 .setMessage(msg)
                 .setOnCancelListener(dialog1 -> {
                     Intent i = getBaseContext().getPackageManager()
-                            .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+                            .getLaunchIntentForPackage(getBaseContext().getPackageName());
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(i);
                     finish();
@@ -107,6 +115,9 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     boolean checkBluetoothAndLocation() {
+        if (!isBluetoothReader) {
+            return true;
+        }
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         if (!adapter.isEnabled()) {
             showErrorDialog("Bluetooth is disabled.");

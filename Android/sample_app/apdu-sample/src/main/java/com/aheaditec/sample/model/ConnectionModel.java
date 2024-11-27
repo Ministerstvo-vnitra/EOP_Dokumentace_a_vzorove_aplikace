@@ -1,17 +1,19 @@
 package com.aheaditec.sample.model;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.aheaditec.acs.AcsReaderConnectionManager;
+import com.aheaditec.airid.AirIdReaderConnectionManager;
 import com.aheaditec.feitian.FeitianReaderConnectionManager;
+import com.aheaditec.sample.Logger;
+import com.aheaditec.sample.enums.ReaderType;
+import com.aheaditec.usb.UsbConnectionManager;
 import com.aheaditec.wrapper.Reader;
-import com.aheaditec.wrapper.interfaces.CardReader;
 import com.aheaditec.wrapper.interfaces.OnPairedReaderFoundListener;
 import com.aheaditec.wrapper.interfaces.ReaderConnectionManager;
 import com.aheaditec.wrapper.interfaces.ReaderStatusListener;
-import com.aheaditec.sample.Logger;
-import com.aheaditec.sample.enums.ReaderType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +67,10 @@ public class ConnectionModel {
             readerManager = new AcsReaderConnectionManager(application);
         } else if (readerType.equals(ReaderType.FEITIAN)) {
             readerManager = new FeitianReaderConnectionManager(application);
+        } else if (readerType.equals(ReaderType.AIR_ID)) {
+            readerManager = new AirIdReaderConnectionManager(application);
+        } else if (readerType.equals(ReaderType.USB)) {
+            readerManager = new UsbConnectionManager(application);
         } else {
             throw new IllegalArgumentException("Invalid/unknown readerType passed as argument.");
         }

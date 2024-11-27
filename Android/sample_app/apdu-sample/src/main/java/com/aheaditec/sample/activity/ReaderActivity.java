@@ -1,33 +1,42 @@
 package com.aheaditec.sample.activity;
 
+import android.Manifest;
 import android.app.AlertDialog;
-import android.arch.lifecycle.ViewModelProviders;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.ViewModelProviders;
+
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.aheaditec.acs.AcsReaderConnectionManager;
+import com.aheaditec.airid.AirIdReaderConnectionManager;
 import com.aheaditec.feitian.FeitianReaderConnectionManager;
 import com.aheaditec.sample.Logger;
 import com.aheaditec.sample.R;
 import com.aheaditec.sample.enums.ReaderType;
 import com.aheaditec.sample.viewmodel.ReaderViewModel;
+import com.aheaditec.usb.UsbConnectionManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+
+import java.util.List;
 
 /**
  * Basic activity for choosing of desired reader plugin.
@@ -119,6 +128,16 @@ public class ReaderActivity extends AppCompatActivity {
                 viewModel.getSelectedReader().postValue(ReaderType.FEITIAN);
                 checkPermissions(FeitianReaderConnectionManager.getPermissionNames());
                 break;
+            case R.id.radioBtnReaderAirId:
+                Logger.d(TAG, "AirID selected.");
+                viewModel.getSelectedReader().postValue(ReaderType.AIR_ID);
+                checkPermissions(AirIdReaderConnectionManager.getPermissionNames());
+                break;
+            case R.id.radioBtnReaderUsb:
+                Logger.d(TAG, "USB selected.");
+                viewModel.getSelectedReader().postValue(ReaderType.USB);
+                startActivity(ConnectActivity.getStartIntent(this, ReaderType.USB));
+                break;
             default:
                 Toast.makeText(this, "No reader selected!", Toast.LENGTH_LONG).show();
                 break;
@@ -133,6 +152,9 @@ public class ReaderActivity extends AppCompatActivity {
         } else {
             if (!bluetoothAdapter.isEnabled()) {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
                 startActivityForResult(enableBtIntent, BLUETOOTH_ON);
             } else {
                 locationCheck();
@@ -175,6 +197,7 @@ public class ReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == BLUETOOTH_ON) {
             Logger.e(TAG, "Result: " + resultCode);
             if (resultCode != RESULT_OK) {

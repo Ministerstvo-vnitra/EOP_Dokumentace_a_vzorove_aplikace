@@ -3,17 +3,20 @@ package com.aheaditec.sample.model;
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.aheaditec.acs.AcsPairing;
+import com.aheaditec.airid.AirdIDPairing;
 import com.aheaditec.feitian.FeitianPairing;
+import com.aheaditec.sample.Logger;
+import com.aheaditec.sample.enums.ReaderType;
+import com.aheaditec.usb.UsbPairing;
 import com.aheaditec.wrapper.Reader;
 import com.aheaditec.wrapper.interfaces.InitStateListener;
 import com.aheaditec.wrapper.interfaces.OnPairWithReaderListener;
 import com.aheaditec.wrapper.interfaces.OnSearchListener;
 import com.aheaditec.wrapper.interfaces.Pairing;
-import com.aheaditec.sample.Logger;
-import com.aheaditec.sample.enums.ReaderType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +87,14 @@ public class PairingModel {
             case FEITIAN:
                 // initialization of Feitian pairing SDK, asynchronous task, result returned in callback InitStateListener
                 new FeitianPairing.InitAsync(listener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, application);
+                break;
+            case AIR_ID:
+                // initialization of AirID pairing SDK, asynchronous task, result returned in callback InitStateListener
+                new AirdIDPairing.InitAsync(listener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, application);
+                break;
+            case USB:
+                // initialization of USB pairing SDK, asynchronous task, result returned in callback InitStateListener
+                new UsbPairing.InitAsync(listener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, application);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown reader type passed as argument.");
@@ -167,20 +178,20 @@ public class PairingModel {
     public Single<Boolean> unpairReader(Reader reader) {
 
         return Single.<Boolean>create(emitter ->
-                // method is synchronous, must be called in AsyncTask
-                new AsyncTask<Void, Void, Boolean>() {
-                    @Override
-                    protected Boolean doInBackground(Void... voids) {
-                        Logger.d(TAG, "Unpair of device: " + reader.toString());
-                        return pairingImpl.unpairReader(reader);
-                    }
+                        // method is synchronous, must be called in AsyncTask
+                        new AsyncTask<Void, Void, Boolean>() {
+                            @Override
+                            protected Boolean doInBackground(Void... voids) {
+                                Logger.d(TAG, "Unpair of device: " + reader.toString());
+                                return pairingImpl.unpairReader(reader);
+                            }
 
-                    @Override
-                    protected void onPostExecute(Boolean res) {
-                        super.onPostExecute(res);
-                        emitter.onSuccess(res);
-                    }
-                }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR))
+                            @Override
+                            protected void onPostExecute(Boolean res) {
+                                super.onPostExecute(res);
+                                emitter.onSuccess(res);
+                            }
+                        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR))
                 .subscribeOn(Schedulers.io());
     }
 
@@ -208,24 +219,24 @@ public class PairingModel {
     public Single<Boolean> renameReader(@NonNull Reader reader, @NonNull String name) {
 
         return Single.<Boolean>create(emitter ->
-                // method is synchronous, must be called in AsyncTask
-                new AsyncTask<Void, Void, Reader>() {
-                    @Override
-                    protected Reader doInBackground(Void... voids) {
-                        Logger.d(TAG, "Rename of device: " + reader.toString());
-                        return pairingImpl.changedDeviceName(reader, name);
-                    }
+                        // method is synchronous, must be called in AsyncTask
+                        new AsyncTask<Void, Void, Reader>() {
+                            @Override
+                            protected Reader doInBackground(Void... voids) {
+                                Logger.d(TAG, "Rename of device: " + reader.toString());
+                                return pairingImpl.changedDeviceName(reader, name);
+                            }
 
-                    @Override
-                    protected void onPostExecute(Reader device) {
-                        super.onPostExecute(device);
-                        if (device.getNickname().equals(name)) {
-                            emitter.onSuccess(true);
-                        } else {
-                            emitter.onSuccess(false);
-                        }
-                    }
-                }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR))
+                            @Override
+                            protected void onPostExecute(Reader device) {
+                                super.onPostExecute(device);
+                                if (device.getNickname().equals(name)) {
+                                    emitter.onSuccess(true);
+                                } else {
+                                    emitter.onSuccess(false);
+                                }
+                            }
+                        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR))
                 .subscribeOn(Schedulers.io());
     }
 }

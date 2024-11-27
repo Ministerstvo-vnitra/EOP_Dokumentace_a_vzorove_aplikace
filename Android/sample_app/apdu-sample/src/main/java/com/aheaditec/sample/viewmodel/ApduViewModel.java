@@ -1,27 +1,28 @@
 package com.aheaditec.sample.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.MutableLiveData;
 import android.content.res.TypedArray;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.util.Pair;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
+import androidx.fragment.app.DialogFragment;
+import androidx.lifecycle.MutableLiveData;
 
 import com.aheaditec.apdu.enums.VerifyCodes;
 import com.aheaditec.apdu.structures.ContainerBasic;
 import com.aheaditec.apdu.structures.PinInfoBasic;
-import com.aheaditec.wrapper.Reader;
-import com.aheaditec.wrapper.interfaces.CardReader;
-import com.aheaditec.wrapper.interfaces.ReaderStatusListener;
 import com.aheaditec.sample.Logger;
 import com.aheaditec.sample.R;
+import com.aheaditec.sample.activity.fragments.ContainerFragment;
+import com.aheaditec.sample.activity.fragments.PinFragment;
 import com.aheaditec.sample.enums.SpinnerOptions;
 import com.aheaditec.sample.listeners.PinEntryListener;
 import com.aheaditec.sample.listeners.SharedStatusListener;
-import com.aheaditec.sample.activity.fragments.ContainerFragment;
-import com.aheaditec.sample.activity.fragments.PinFragment;
 import com.aheaditec.sample.model.ReaderModel;
+import com.aheaditec.wrapper.Reader;
+import com.aheaditec.wrapper.interfaces.CardReader;
+import com.aheaditec.wrapper.interfaces.ReaderStatusListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

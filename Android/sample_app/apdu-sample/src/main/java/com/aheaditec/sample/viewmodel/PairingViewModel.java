@@ -1,15 +1,16 @@
 package com.aheaditec.sample.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.MutableLiveData;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
-import com.aheaditec.wrapper.Reader;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.MutableLiveData;
+
 import com.aheaditec.sample.enums.ReaderType;
 import com.aheaditec.sample.model.PairingModel;
+import com.aheaditec.wrapper.Reader;
 
 import java.util.ArrayList;
 import java.util.List;

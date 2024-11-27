@@ -41,6 +41,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Feitian" />
+
+        <RadioButton
+            android:id="@+id/radioBtnReaderAirId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AirID" />
+
+        <RadioButton
+            android:id="@+id/radioBtnReaderUsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USB" />
     </RadioGroup>
 
     <Button

@@ -4,12 +4,13 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.bluetooth_le"
-        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
     <application
         android:allowBackup="false"
@@ -18,18 +19,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ReaderActivity" >
+        <activity
+            android:name=".activity.ReaderActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PairingActivity"
+        <activity
+            android:name=".activity.PairingActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.ConnectActivity"
+        <activity
+            android:name=".activity.ConnectActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.ApduActivity"
+        <activity
+            android:name=".activity.ApduActivity"
             android:theme="@style/AppTheme" />
     </application>
 

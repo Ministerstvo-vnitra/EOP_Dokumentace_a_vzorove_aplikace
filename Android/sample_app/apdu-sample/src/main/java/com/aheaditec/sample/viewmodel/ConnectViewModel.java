@@ -1,16 +1,17 @@
 package com.aheaditec.sample.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.MutableLiveData;
 import android.os.Handler;
-import android.support.annotation.NonNull;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.MutableLiveData;
+
+import com.aheaditec.sample.enums.ReaderType;
+import com.aheaditec.sample.listeners.SharedStatusListener;
+import com.aheaditec.sample.model.ConnectionModel;
 import com.aheaditec.wrapper.Reader;
 import com.aheaditec.wrapper.interfaces.CardReader;
 import com.aheaditec.wrapper.interfaces.ReaderStatusListener;
-import com.aheaditec.sample.listeners.SharedStatusListener;
-import com.aheaditec.sample.enums.ReaderType;
-import com.aheaditec.sample.model.ConnectionModel;
 
 import java.util.ArrayList;
 import java.util.List;
