@@ -1,4 +1,5 @@
 {
+  "originHash" : "62bb57f710fb225d6a7521921d48086f31e482db6ad20f35384634011672fdcc",
   "pins" : [
     {
       "identity" : "cartography",
@@ -32,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSender.git",
       "state" : {
-        "revision" : "7397581cda0bc507a20b797848da24c825f133e7",
-        "version" : "2.0.2"
+        "revision" : "91b0ce8ced3044c7ee2b5d0e58f90667cc9caaa0",
+        "version" : "2.0.4"
       }
     },
     {
@@ -64,5 +65,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

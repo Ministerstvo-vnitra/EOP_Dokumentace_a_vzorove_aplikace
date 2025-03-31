@@ -743,7 +743,7 @@
 			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_APDUSender.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.0.4;
 			};
 		};
 		2FE11CCE2C876A2E00D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_Readers" */ = {
@@ -751,7 +751,7 @@
 			repositoryURL = "git@github.com:Ministerstvo-vnitra/EOP_iOS_Readers.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.0.3;
 			};
 		};
 		2FE11CD52C876A5500D7CCF2 /* XCRemoteSwiftPackageReference "EOP_iOS_AheadTLV" */ = {
